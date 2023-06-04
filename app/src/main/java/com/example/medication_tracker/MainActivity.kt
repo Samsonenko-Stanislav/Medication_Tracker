@@ -1,13 +1,15 @@
 package  com.example.medication_tracker
 
-import MedicineViewModel
+import AddMedicineScreen
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.medication_tracker.MedicineDatabase
-import com.example.medication_tracker.MedicineViewModelFactory
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.medication_tracker.dao.MedicineDao
+import com.example.medication_tracker.screens.MedicationTrackerApp
 import com.example.medication_tracker.screens.MedicineListScreen
 
 class MainActivity : AppCompatActivity() {
@@ -20,12 +22,9 @@ class MainActivity : AppCompatActivity() {
         medicineDao = database.medicineDao()
 
         setContent {
-            val viewModel: MedicineViewModel = viewModel(factory = MedicineViewModelFactory(medicineDao))
-            MedicineListScreen(viewModel)
+            MedicationTrackerApp(medicineDao)
         }
     }
 }
-
-
 
 

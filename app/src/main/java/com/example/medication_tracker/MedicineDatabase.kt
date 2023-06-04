@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.medication_tracker.dao.MedicineDao
 import com.example.medication_tracker.entities.Medicine
 
-@Database(entities = [Medicine::class], version = 1)
+@Database(entities = [Medicine::class], version = 1, exportSchema = true)
 abstract class MedicineDatabase : RoomDatabase() {
     abstract fun medicineDao(): MedicineDao
 

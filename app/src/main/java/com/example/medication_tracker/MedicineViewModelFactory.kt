@@ -1,6 +1,5 @@
 package com.example.medication_tracker
 
-import MedicineViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.medication_tracker.dao.MedicineDao

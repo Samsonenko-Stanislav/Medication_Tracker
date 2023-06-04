@@ -8,5 +8,7 @@ import androidx.room.PrimaryKey
 data class Medicine(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     @ColumnInfo(name = "name") val name: String,
+    @ColumnInfo(name = "dosage") val dosage: String,
+    @ColumnInfo(name = "time") val time: String,
     @ColumnInfo(name = "taken") val taken: Boolean = false
 )

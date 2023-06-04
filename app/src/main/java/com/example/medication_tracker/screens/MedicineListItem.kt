@@ -1,6 +1,5 @@
 package com.example.medication_tracker.screens
 
-import MedicineViewModel
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
@@ -9,6 +8,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.medication_tracker.MedicineViewModel
 import com.example.medication_tracker.entities.Medicine
 
 @Composable
